@@ -27,7 +27,7 @@ import NginxImg from '../../img/badges/nginx.png';
 import CodeImg from '../../img/code.jpg';
 
 const Code = () => {
-  const [containerHeight, setContainerHeight] = useState(0);
+  // const [containerHeight, setContainerHeight] = useState(0);
 
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
@@ -37,18 +37,42 @@ const Code = () => {
 
   const appRef = useRef(null);
 
+  // useEffect(() => {
+  //   if (appRef.current) {
+  //     setContainerHeight(appRef.current.scrollHeight);
+  //   }
+  // }, []);
+
   useEffect(() => {
-    if (appRef.current) {
-      setContainerHeight(appRef.current.scrollHeight);
-    }
+    const setHeight = () => {
+      if (appRef.current) {
+        const screenHeight = window.innerHeight;
+        const bodyHeight = document.body.scrollHeight;
+        // appRef.current.style.height = `${Math.max(screenHeight, bodyHeight)}px`;
+        appRef.current.style.height = `${bodyHeight}px`;
+      }
+    };
+
+    setHeight(); // Set height on initial load
+
+    const handleResize = () => {
+      setHeight(); // Update height on window resize
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup event listener
+    };
   }, []);
 
   return (
     <div
       ref={appRef}
-      style={{
-        height: `${containerHeight}px`,
-      }}
+      // style={{
+      //   height: `${containerHeight}px`,
+      // }}
       className="background"
     >
       <Nav />
