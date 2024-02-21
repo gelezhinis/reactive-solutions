@@ -84,44 +84,76 @@ const Code = () => {
                 Javascript yra standartinė interneto programavimo kalba, skirta
                 tinklapių sąveikai ir automatizavimui. Ji skirta tiek "kliento
                 pusės" (client-side, front-end) tiek "serverio-pusės"
-                (server-side, back-end) programavimui. Kartu su JavaScript naudoju įvairias
-                papildomas bibliotekas, kad būtų suteikta pati geriausia
-                patirtis galutiniam tinklapio vartotojui. Kliento pusėje dažnai naudoju
-                React biblioteką, kuri yra galinga ir lanksti, kad būtų lengviau
-                kurti daugialypius tinklapius. Kartu su React naudoju Redux, tai
-                padeda valdyti duomenų srautą bei tvarkyti sudėtingas aplikacijų
-                būsenas ir palaiko būsenos valdymą skaidriu ir efektyviu būdu.
-                Serverio pusėje naudoju Node.js kartu su Express.js, kad būtų
-                galima kurti dinamiškus tinklapius su serverio pusės logika ir
-                užtikrinti saugų duomenų srautą tarp vartotojo ir duomenų bazės.
-                Jei reikia mobiliųjų aplikacijų, naudoju React Native, kad tinklapio funkcionalumas būtų lengviau pritaikomas mobiliajai platformai.
+                (server-side, back-end) programavimui. Kartu su JavaScript
+                naudoju įvairias papildomas bibliotekas, kad būtų suteikta pati
+                geriausia patirtis galutiniam tinklapio vartotojui. Kliento
+                pusėje dažnai naudoju React biblioteką, kuri yra galinga ir
+                lanksti, kad būtų lengviau kurti daugialypius tinklapius. Kartu
+                su React naudoju Redux, tai padeda valdyti duomenų srautą bei
+                tvarkyti sudėtingas aplikacijų būsenas ir palaiko būsenos
+                valdymą skaidriu ir efektyviu būdu. Serverio pusėje naudoju
+                Node.js kartu su Express.js, kad būtų galima kurti dinamiškus
+                tinklapius su serverio pusės logika ir užtikrinti saugų duomenų
+                srautą tarp vartotojo ir duomenų bazės. Jei reikia mobiliųjų
+                aplikacijų, naudoju React Native, kad tinklapio funkcionalumas
+                būtų lengviau pritaikomas mobiliajai platformai.
               </p>
             </div>
           </div>
         </div>
         <div className="badges-container">
           <div className="badges">
-            {/* <div>               */}
-            <img src={HtmlImg} alt="html" />
-            <img src={JSImg} alt="javascript" />
-            <img src={ReactImg} alt="react" />
-            <img src={ReduxImg} alt="redux" />
-            <img src={NextImg} alt="nextjs" />
-            <img src={VueImg} alt="vue" />
-            <img src={NativeImg} alt="react-native" />
-            <img src={GitImg} alt="git" width={80} />
-            <img src={NodeImg} alt="nodejs" />
-            <img src={ExpressImg} alt="express" />
-            {/* </div>
-            <div> */}
-            <img src={GraphImg} alt="graphql" />
-            <img src={ApolloImg} alt="apollo" />
-            <img src={MongoImg} alt="mongodb" />
-            <img src={FirebaseImg} alt="firebase" />
-            <img src={MysqlImg} alt="mysql" />
-            <img src={PostgresImg} alt="postgres" />
-            <img src={NginxImg} alt="nginx" />
-            {/* </div> */}
+            <div className="badge">
+              <img src={HtmlImg} alt="html" />
+            </div>
+            <div className="badge sm-h">
+              <img src={JSImg} alt="javascript" />
+            </div>
+            <div className="badge">
+              <img src={ReactImg} alt="react" />
+            </div>
+            <div className="badge sm-h">
+              <img src={ReduxImg} alt="redux" />
+            </div>
+            <div className="badge">
+              <img src={NextImg} alt="nextjs" />
+            </div>
+            <div className="badge">
+              <img src={VueImg} alt="vue" />
+            </div>
+            <div className="badge">
+              <img src={NativeImg} alt="react-native" />
+            </div>
+            <div className="badge">
+              <img src={GitImg} alt="git" width={80} />
+            </div>
+            <div className="badge">
+              <img src={NodeImg} alt="nodejs" />
+            </div>
+            <div className="badge sm-h">
+              <img src={ExpressImg} alt="express" />
+            </div>
+            <div className="badge sm-h">
+              <img src={GraphImg} alt="graphql" />
+            </div>
+            <div className="badge sm-h">
+              <img src={ApolloImg} alt="apollo" />
+            </div>
+            <div className="badge lg-w">
+              <img src={MongoImg} alt="mongodb" />
+            </div>
+            <div className="badge lg-w">
+              <img src={FirebaseImg} alt="firebase" />
+            </div>
+            <div className="badge">
+              <img src={MysqlImg} alt="mysql" />
+            </div>
+            <div className="badge sm-h">
+              <img src={PostgresImg} alt="postgres" />
+            </div>
+            <div className="badge">
+              <img src={NginxImg} alt="nginx" />
+            </div>
           </div>
         </div>
       </div>

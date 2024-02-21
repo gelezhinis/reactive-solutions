@@ -79,55 +79,41 @@
   gap: 1rem;
 }
 
-.badges div {
+/* .badges div {
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   gap: 1.7rem;
-}
+} */
 
-.badges img {
+.badge {
   height: auto;
   max-height: 50px;
+  width: auto;
+  max-width: 50px;
+  display: flex;
+  justify-content: center; /* Horizontally center items */
+  align-items: center;
 }
 
-.badges img:nth-child(2) {
-  height: 45px;
-  padding-top: 0.3rem;
+.badge img {
+  width: 100%;
+  height: auto;
 }
-.badges img:nth-child(4) {
-  height: 45px;
-  padding-top: 0.3rem;
+
+.sm-h {
+  height: 44px;
 }
-.badges img:nth-child(8) {
-  height: 40px;
-  padding-top: 0.3rem;
+
+.sm-h img:first-child {
+  margin-top: 0.3rem;
 }
-.badges img:nth-child(10) {
-  height: 42px;
+
+.sm-h img {
+  height: 100%;
 }
-.badges img:nth-child(11) {
-  height: 48px;
-}
-.badges img:nth-child(12) {
-  height: 47px;
-}
-.badges img:nth-child(13) {
-  height: 42px;
-  padding-top: 0.4rem;
-}
-.badges img:nth-child(14) {
-  padding-top: 0.3rem;
-}
-.badges img:nth-child(15) {
-  height: 60px;
-  padding-bottom: 0.6rem;
-}
-.badges img:nth-child(16) {
-  height: 46px;
-}
-.badges img:nth-child(17) {
-  height: 46px;
+
+.lg-w {
+  max-width: 110px;
 }
 
 .animate-title {
@@ -230,12 +216,14 @@
   .badges-container {
     margin-top: 13rem;
   }
-  .badges img {
-    max-height: 30px;
+  .badge {
+    max-height: 40px;
   }
-  .badges img:nth-child(8) {
-    height: 27px;
-    width: 53px;
+  .sm-h {
+    height: 44px;
+  }
+  .lg-w {
+    max-width: 80px;
   }
 }
 
