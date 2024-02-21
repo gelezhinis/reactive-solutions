@@ -167,34 +167,19 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* height: 100%; */
   }
 
   .home-image {
-    /* clip-path: polygon(
-      0% 15%,
-      7% 8%,
-      15% 0%,
-      85% 0%,
-      100% 0,
-      100% 15%,
-      100% 85%,
-      93% 92%,
-      85% 100%,
-      15% 100%,
-      0 100%,
-      0% 85%
-    ); */
     clip-path: inset(0 0 0 0);
   }
 }
 
-@media screen and (max-width: 380px) and (max-height: 670px) {
+@media screen and (max-width: 375px) and (max-height: 670px) {
   .home-image {
     max-height: 300px;
   }
   .home-intro {
-    margin-bottom: 0;
+    margin: 1rem 0 0 0;
   }
 }
 
