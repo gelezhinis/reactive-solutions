@@ -27,6 +27,10 @@ const Contact = () => {
 
   const appRef = useRef(null);
 
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+  const USER_ID = process.env.REACT_APP_USER_ID;
+
   useEffect(() => {
     if (appRef.current) {
       setContainerHeight(appRef.current.scrollHeight);
@@ -38,10 +42,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        SERVICE_ID,
+        TEMPLATE_ID,
         formRef.current,
-        process.env.REACT_APP_USER_ID
+        USER_ID
       )
       .then((result) => {
         console.log(result.text);
