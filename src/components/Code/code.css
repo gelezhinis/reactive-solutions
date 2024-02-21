@@ -218,6 +218,7 @@
   }
   .badge {
     max-height: 40px;
+    max-width: 40px;
   }
   .sm-h {
     height: 44px;
