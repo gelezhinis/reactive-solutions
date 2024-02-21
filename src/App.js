@@ -21,7 +21,7 @@ const App = () => {
         backgroundImage: darkMode
           ? 'linear-gradient(50deg, #333, #222)'
           : 'linear-gradient(50deg, #ccc, #fff)',
-        color: darkMode && 'white'
+        color: darkMode && 'white',
       }}
       className="background"
     >

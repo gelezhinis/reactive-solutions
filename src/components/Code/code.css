@@ -1,15 +1,20 @@
 .container {
   height: 100vh;
-  /* height: auto; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   max-width: 1200px;
   margin: 0 2rem;
+
+  position: relative;
+  z-index: 1;
+  /* Add padding to create space for the background */
+  padding-bottom: 50px; /* Adjust as needed */
+  /* Apply overflow auto to enable scrolling if content exceeds viewport */
+  overflow-y: auto;
 }
 
 .code {
-  /* height: 100vh; */
   padding-top: 2rem;
   display: flex;
   align-items: center;
@@ -79,19 +84,13 @@
   gap: 1rem;
 }
 
-/* .badges div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.7rem;
-} */
-
 .badge {
   height: auto;
   max-height: 50px;
   width: auto;
   max-width: 50px;
   display: flex;
-  justify-content: center; /* Horizontally center items */
+  justify-content: center;
   align-items: center;
 }
 
@@ -104,12 +103,24 @@
   height: 44px;
 }
 
-.sm-h img:first-child {
-  margin-top: 0.3rem;
+.badges .badge:nth-child(2) {
+  margin-top: 3px;
+}
+
+.badges .badge:nth-child(14) {
+  margin-top: 5px;
 }
 
 .sm-h img {
   height: 100%;
+}
+
+.sm-w {
+  max-width: 60px;
+}
+
+.md-w {
+  max-width: 80px;
 }
 
 .lg-w {
@@ -222,6 +233,9 @@
   }
   .sm-h {
     height: 44px;
+  }
+  .md-w {
+    max-width: 60px;
   }
   .lg-w {
     max-width: 80px;

@@ -1,4 +1,4 @@
-import { useContext, useState, useRef, useEffect } from 'react';
+import { useContext, useRef, useEffect } from 'react';
 import { ThemeContext } from '../../context';
 
 import { useInView } from 'react-intersection-observer';
@@ -43,23 +43,41 @@ const Code = () => {
   //   }
   // }, []);
 
+  // useEffect(() => {
+  //   const setHeight = () => {
+  //     if (appRef.current) {
+  //       const screenHeight = window.innerHeight;
+  //       const bodyHeight = document.body.scrollHeight;
+  //       // appRef.current.style.height = `${Math.max(screenHeight, bodyHeight)}px`;
+  //       appRef.current.style.height = `${bodyHeight}px`;
+  //     }
+  //   };
+
+  //   setHeight(); // Set height on initial load
+
+  //   const handleResize = () => {
+  //     setHeight(); // Update height on window resize
+  //   };
+
+  //   window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize); // Cleanup event listener
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const setHeight = () => {
-      if (appRef.current) {
-        const screenHeight = window.innerHeight;
-        const bodyHeight = document.body.scrollHeight;
-        // appRef.current.style.height = `${Math.max(screenHeight, bodyHeight)}px`;
-        appRef.current.style.height = `${bodyHeight}px`;
-      }
+    const setBodyBackgroundSize = () => {
+      document.body.style.backgroundSize = `100% ${appRef.current.scrollHeight}px`;
     };
 
-    setHeight(); // Set height on initial load
+    setBodyBackgroundSize(); // Set background size on initial load
 
     const handleResize = () => {
-      setHeight(); // Update height on window resize
+      setBodyBackgroundSize(); // Update background size on window resize
     };
 
-    window.addEventListener('resize', handleResize);
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -139,7 +157,7 @@ const Code = () => {
             <div className="badge sm-h">
               <img src={ReduxImg} alt="redux" />
             </div>
-            <div className="badge">
+            <div className="badge md-w">
               <img src={NextImg} alt="nextjs" />
             </div>
             <div className="badge">
@@ -148,10 +166,10 @@ const Code = () => {
             <div className="badge">
               <img src={NativeImg} alt="react-native" />
             </div>
-            <div className="badge">
+            <div className="badge sm-w">
               <img src={GitImg} alt="git" width={80} />
             </div>
-            <div className="badge">
+            <div className="badge md-w">
               <img src={NodeImg} alt="nodejs" />
             </div>
             <div className="badge sm-h">
@@ -169,7 +187,7 @@ const Code = () => {
             <div className="badge lg-w">
               <img src={FirebaseImg} alt="firebase" />
             </div>
-            <div className="badge">
+            <div className="badge sm-w">
               <img src={MysqlImg} alt="mysql" />
             </div>
             <div className="badge sm-h">
