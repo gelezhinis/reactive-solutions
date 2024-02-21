@@ -1,0 +1,132 @@
+import { useContext, useState, useRef, useEffect } from 'react';
+import { ThemeContext } from '../../context';
+
+import { useInView } from 'react-intersection-observer';
+
+import Nav from '../Nav/Nav';
+
+import './code.css';
+import HtmlImg from '../../img/badges/html.png';
+import JSImg from '../../img/badges/js.png';
+import ReactImg from '../../img/badges/react.png';
+import NativeImg from '../../img/badges/react-native.png';
+import ReduxImg from '../../img/badges/redux.png';
+import GitImg from '../../img/badges/git.png';
+import VueImg from '../../img/badges/vue.png';
+import ExpressImg from '../../img/badges/express.png';
+import ApolloImg from '../../img/badges/apollo.png';
+import FirebaseImg from '../../img/badges/firebase.png';
+import GraphImg from '../../img/badges/graphql.png';
+import MysqlImg from '../../img/badges/mysql.png';
+import MongoImg from '../../img/badges/mongodb.png';
+import PostgresImg from '../../img/badges/postgres.png';
+import NextImg from '../../img/badges/next.png';
+import NodeImg from '../../img/badges/node.png';
+import NginxImg from '../../img/badges/nginx.png';
+
+import CodeImg from '../../img/code.jpg';
+
+const Code = () => {
+  const [containerHeight, setContainerHeight] = useState(0);
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
+  const { ref: ref1, inView: firstTitle } = useInView();
+  const { ref: ref2, inView: firstText } = useInView();
+
+  const appRef = useRef(null);
+
+  useEffect(() => {
+    if (appRef.current) {
+      setContainerHeight(appRef.current.scrollHeight);
+    }
+  }, []);
+
+  return (
+    <div
+      ref={appRef}
+      style={{
+        height: `${containerHeight}px`,
+      }}
+      className="background"
+    >
+      <Nav />
+      <div className="container">
+        <div className="code">
+          <div className="code-left">
+            <div
+              className="code-card bg"
+              style={{
+                backgroundColor: !darkMode
+                  ? 'rgb(13, 96, 99)'
+                  : 'rgb(46, 148, 151)',
+              }}
+            >
+              <div className="code-card">
+                <img src={CodeImg} alt="" className="code-image" />
+              </div>
+            </div>
+          </div>
+          <div className="code-right">
+            <h1
+              className={'code-title ' + (firstTitle ? 'animate-title' : '')}
+              ref={ref1}
+            >
+              Programavimo Kalba
+            </h1>
+            <div className={firstText ? 'animate-first-text' : ''} ref={ref2}>
+              <p className="code-sub">
+                Pagrindinė mano projektuose naudojama programavimo kalba -
+                JavaScript.
+              </p>
+              <p className="code-desc">
+                Javascript yra standartinė interneto programavimo kalba, skirta
+                tinklapių sąveikai ir automatizavimui. Ji skirta tiek "kliento
+                pusės" (client-side, front-end) tiek "serverio-pusės"
+                (server-side, back-end) programavimui. Kartu su JavaScript naudoju įvairias
+                papildomas bibliotekas, kad būtų suteikta pati geriausia
+                patirtis galutiniam tinklapio vartotojui. Kliento pusėje dažnai naudoju
+                React biblioteką, kuri yra galinga ir lanksti, kad būtų lengviau
+                kurti daugialypius tinklapius. Kartu su React naudoju Redux, tai
+                padeda valdyti duomenų srautą bei tvarkyti sudėtingas aplikacijų
+                būsenas ir palaiko būsenos valdymą skaidriu ir efektyviu būdu.
+                Serverio pusėje naudoju Node.js kartu su Express.js, kad būtų
+                galima kurti dinamiškus tinklapius su serverio pusės logika ir
+                užtikrinti saugų duomenų srautą tarp vartotojo ir duomenų bazės.
+                Jei reikia mobiliųjų aplikacijų, naudoju React Native, kad tinklapio funkcionalumas būtų lengviau pritaikomas mobiliajai platformai.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="badges-container">
+          <div className="badges">
+            {/* <div>               */}
+            <img src={HtmlImg} alt="html" />
+            <img src={JSImg} alt="javascript" />
+            <img src={ReactImg} alt="react" />
+            <img src={ReduxImg} alt="redux" />
+            <img src={NextImg} alt="nextjs" />
+            <img src={VueImg} alt="vue" />
+            <img src={NativeImg} alt="react-native" />
+            <img src={GitImg} alt="git" width={80} />
+            <img src={NodeImg} alt="nodejs" />
+            <img src={ExpressImg} alt="express" />
+            {/* </div>
+            <div> */}
+            <img src={GraphImg} alt="graphql" />
+            <img src={ApolloImg} alt="apollo" />
+            <img src={MongoImg} alt="mongodb" />
+            <img src={FirebaseImg} alt="firebase" />
+            <img src={MysqlImg} alt="mysql" />
+            <img src={PostgresImg} alt="postgres" />
+            <img src={NginxImg} alt="nginx" />
+            {/* </div> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Code;
