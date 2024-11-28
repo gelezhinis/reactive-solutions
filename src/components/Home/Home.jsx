@@ -14,7 +14,7 @@ const Home = () => {
             <h1 className="home-name">Linas</h1>
             
             <p className="home-desc">
-              Esu čia tam, kad sukurčiau internetinį tinklapį Jums ar Jūsų verslui. Visi mano darbai pagrįsti paprastumu ir praktiškumu, bei moderniu dizainu, kad vartotojo patirtis būtų pati geriausia. Tinklapius kuriu naudodamas patikimas programavimo kalbas bei jų karkasus ir bibliotekas. Galiu redaguoti, patobulinti ar atnaujinti ir esamus internetinius tinklapius. 
+              Esu čia tam, kad sukurčiau internetinį tinklapį Jums ar Jūsų verslui. Visi mano darbai pagrįsti paprastumu ir praktiškumu, bei moderniu dizainu, kad vartotojo patirtis būtų pati geriausia. Tinklapius kuriu naudodamas patikimas programavimo kalbas bei jų karkasus ir bibliotekas. Taip pat galiu redaguoti, atnaujinti internetinius tinklapius pagal Jūsų pageidavimus. 
             </p>
             <div className="slides-wrapper">
               <div className="slides">

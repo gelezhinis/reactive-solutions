@@ -63,9 +63,9 @@ const Contact = () => {
   return (
     <div
       ref={appRef}
-      style={{
-        height: `${containerHeight}px`,
-      }}
+      // style={{
+      //   height: `${containerHeight}px`,
+      // }}
       className="background"
     >
       <Nav />
