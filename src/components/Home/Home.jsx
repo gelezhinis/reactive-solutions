@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './home.css';
 import Me from '../../img/as1.jpg';
 

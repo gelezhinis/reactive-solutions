@@ -1,4 +1,4 @@
-import { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import { ThemeContext } from '../../context';
 
 import { useInView } from 'react-intersection-observer';
