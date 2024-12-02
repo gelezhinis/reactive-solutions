@@ -16,7 +16,7 @@ jobs:
 
       - name: Force clean repository
         run: |
-          sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
+          sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/* || true
 
       - name: Checkout code
         uses: actions/checkout@v3
