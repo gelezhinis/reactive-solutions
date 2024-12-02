@@ -17,33 +17,36 @@ jobs:
       # - name: Force clean repository
       #   run: |
       #     sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/* || true
-      - name: Fix permissions for reactive-solutions
-        run: |
-          sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
-          sudo chown -R $(whoami):$(whoami) /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
+      # - name: Fix permissions for reactive-solutions
+      #   run: |
+      #     sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
+      #     sudo chown -R $(whoami):$(whoami) /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
 
-      - name: Clean reactive-solutions git directory
-        run: sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/.git || true
+      # - name: Clean reactive-solutions git directory
+      #   run: sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/.git || true
 
-      - name: Debug directory permissions
-        run: ls -ld /var/www/reactive/_work/reactive-solutions/reactive-solutions
+      # - name: Debug directory permissions
+      #   run: ls -ld /var/www/reactive/_work/reactive-solutions/reactive-solutions
 
       - name: Checkout code
         uses: actions/checkout@v3
         with: 
           set-safe-directory: true
 
-      - name: Create .env file
-        run: |
-          echo "REACT_APP_SERVICE_ID=service_6yot61z" >> .env
-          echo "REACT_APP_TEMPLATE_ID=template_ipodwef" >> .env
-          echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env
+      # - name: Create .env file
+      #   run: |
+      #     echo "REACT_APP_SERVICE_ID=service_6yot61z" >> .env
+      #     echo "REACT_APP_TEMPLATE_ID=template_ipodwef" >> .env
+      #     echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env
 
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node-version}}
 
-      - name: Install dependencies & npm run build
-        run: 
-          npm i && npm audit fix && npm run build
+      # - name: Install dependencies & npm run build
+      #   run: 
+      #     npm i
+      
+      - name: Build
+        run: npm run build
