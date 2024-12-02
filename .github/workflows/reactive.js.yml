@@ -12,11 +12,11 @@ jobs:
 
     steps: 
       - name: Fix permissions
-        run: sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions
+        run: chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions
 
       - name: Force clean repository
         run: |
-          sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
+          rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
 
       - name: Checkout code
         uses: actions/checkout@v3
