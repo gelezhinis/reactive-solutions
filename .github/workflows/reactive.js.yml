@@ -18,10 +18,12 @@ jobs:
       #   run: |
       #     sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/* || true
 
+      - name: Clean reactive-solutions git directory
+        run: sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/.git || true
+
       - name: Checkout code
         uses: actions/checkout@v3
         with: 
-          set-safe-directory: true
           clean: true
 
       - name: Create .env file
