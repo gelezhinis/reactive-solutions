@@ -13,21 +13,27 @@ jobs:
     steps: 
       - name: Fix permissions
         run: sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions
+
       - name: Force clean repository
         run: |
           sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
+
       - name: Checkout code
         uses: actions/checkout@v3
         with: 
           clean: true
+
       - name: Create .env file
         run: |
           echo "REACT_APP_SERVICE_ID=service_6yot61z" >> .env
           echo "REACT_APP_TEMPLATE_ID=template_ipodwef" >> .env
           echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env
+
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node-version}}
+
+      - name: Instal dependencies & npm run build
         run: 
-          npm run build
+          npm i && npm run build
