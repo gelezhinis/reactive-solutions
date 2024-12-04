@@ -24,7 +24,7 @@ const Home = () => {
                   <h2 className="home-title-item">Internetiniai Tinklapiai</h2>
                 </div>
                 <div className="slide">
-                  <h2 className="home-title-item">Grafinis Dizainas</h2>
+                  <h2 className="home-title-item">Hostingas</h2>
                 </div>
                 <div className="slide">
                   <h2 className="home-title-item">Mobiliosios Aplikacijos</h2>

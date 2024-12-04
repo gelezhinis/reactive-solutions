@@ -28,10 +28,10 @@ jobs:
       # - name: Debug directory permissions
       #   run: ls -ld /var/www/reactive/_work/reactive-solutions/reactive-solutions
 
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with: 
-          set-safe-directory: true
+      # - name: Checkout code
+      #   uses: actions/checkout@v3
+      #   with: 
+      #     set-safe-directory: true
 
       # - name: Create .env file
       #   run: |
