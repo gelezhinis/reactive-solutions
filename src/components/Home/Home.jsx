@@ -16,7 +16,7 @@ const Home = () => {
             <h1 className="home-name">Linas</h1>
             
             <p className="home-desc">
-              Esu internetinių tinklapių kūrėjas, pasiruošęs sukurti šiuolaikišką ir funkcionalų tinklapį, pritaikytą jūsų asmeniniams ar verslo poreikiams. Visi mano darbai pagrįsti paprastumu ir praktiškumu, bei moderniu dizainu, kad vartotojo patirtis būtų pati geriausia. Tinklapius kuriu naudodamas patikimas programavimo kalbas bei jų karkasus ir bibliotekas. Taip pat galiu redaguoti ar atnaujinti esamą internetinį tinklapį pagal Jūsų pageidavimus. 
+              Esu internetinių tinklapių kūrėjas, pasiruošęs sukurti šiuolaikišką ir funkcionalų tinklapį, pritaikytą Jūsų asmeniniams ar verslo poreikiams. Visi mano darbai pagrįsti paprastumu ir praktiškumu, bei moderniu dizainu, kad vartotojo patirtis būtų pati geriausia. Tinklapius kuriu naudodamas patikimas programavimo kalbas bei jų karkasus ir bibliotekas. Taip pat galiu redaguoti ar atnaujinti esamą internetinį tinklapį pagal Jūsų pageidavimus. 
             </p>
             <div className="slides-wrapper">
               <div className="slides">

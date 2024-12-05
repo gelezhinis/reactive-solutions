@@ -125,8 +125,8 @@ const Code = () => {
                 JavaScript.
               </p>
               <p className="code-desc">
-                Javascript yra standartinė interneto programavimo kalba, skirta
-                tinklapių sąveikai ir automatizavimui. Ji skirta tiek "kliento
+                Javascript yra standartinė internetinių tinklapių programavimo kalba, skirta
+                jų sąveikai ir automatizavimui. Ji skirta tiek "kliento
                 pusės" (client-side, front-end) tiek "serverio-pusės"
                 (server-side, back-end) programavimui. Kartu su JavaScript
                 naudoju įvairias papildomas bibliotekas, kad būtų suteikta pati
@@ -134,7 +134,7 @@ const Code = () => {
                 pusėje dažnai naudoju React biblioteką, kuri yra galinga ir
                 lanksti, kad būtų lengviau kurti daugialypius tinklapius. Kartu
                 su React naudoju Redux, tai padeda valdyti duomenų srautą bei
-                tvarkyti sudėtingas aplikacijų būsenas ir palaiko būsenos
+                tvarkyti sudėtingas aplikacijų būsenas ir palaiko jų
                 valdymą skaidriu ir efektyviu būdu. Serverio pusėje naudoju
                 Node.js kartu su Express.js, kad būtų galima kurti dinamiškus
                 tinklapius su serverio pusės logika ir užtikrinti saugų duomenų
