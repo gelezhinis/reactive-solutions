@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "REACT_APP_SERVICE_ID=service_6yot61z" >> .env
           echo "REACT_APP_TEMPLATE_ID=template_ipodwef" >> .env
-          echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env/
+          echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env
 
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v3
