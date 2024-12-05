@@ -11,23 +11,6 @@ jobs:
     runs-on: self-hosted
 
     steps: 
-      # - name: Fix permissions
-      #   run: sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions
-
-      # - name: Force clean repository
-      #   run: |
-      #     sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/* || true
-      # - name: Fix permissions for reactive-solutions
-      #   run: |
-      #     sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
-      #     sudo chown -R $(whoami):$(whoami) /var/www/reactive/_work/reactive-solutions/reactive-solutions || true
-
-      # - name: Clean reactive-solutions git directory
-      #   run: sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/.git || true
-
-      # - name: Debug directory permissions
-      #   run: ls -ld /var/www/reactive/_work/reactive-solutions/reactive-solutions
-
       - name: Checkout code
         uses: actions/checkout@v3
         with: 
