@@ -13,7 +13,6 @@ const Home = () => {
         <div className="home-left">
           <div className="home-left-wrapper">
             <h2 className="home-intro">Sveiki,</h2>
-            {/* <h1 className="home-name">Linas</h1> */}
 
             <p className="home-desc">
               esu internetinių tinklapių kūrėjas, pasiruošęs sukurti
