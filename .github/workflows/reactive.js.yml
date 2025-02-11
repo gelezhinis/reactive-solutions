@@ -1,16 +1,16 @@
 name: reactive.js CI
 
-on: 
+on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
 jobs:
-  build: 
+  build:
     runs-on: self-hosted
 
-    steps: 
+    steps:
       # - name: Fix permissions
       #   run: sudo chmod -R u+rwx /var/www/reactive/_work/reactive-solutions/reactive-solutions
 
@@ -24,11 +24,9 @@ jobs:
 
       # - name: Clean reactive-solutions git directory
       #   run: sudo rm -rf /var/www/reactive/_work/reactive-solutions/reactive-solutions/.git || true
-
-
       - name: Checkout code
         uses: actions/checkout@v3
-        with: 
+        with:
           set-safe-directory: true
 
       - name: Create .env file
@@ -42,15 +40,11 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
 
-      - name: Install dependencies 
-        run: 
-          npm install --legacy-peer-deps
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - name: Audit fix 
-        run: 
-          npm audit fix --legacy-peer-deps
+      - name: Audit fix
+        run: npm audit fix --legacy-peer-deps
 
-      - name: Build 
-        run: 
-          npm run build
-      
+      - name: Build
+        run: npm run build
