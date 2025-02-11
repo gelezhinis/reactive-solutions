@@ -12,11 +12,11 @@ const Home = () => {
       <div className="home">
         <div className="home-left">
           <div className="home-left-wrapper">
-            <h2 className="home-intro">Sveiki, mano vardas</h2>
-            <h1 className="home-name">Linas</h1>
+            <h2 className="home-intro">Sveiki,</h2>
+            {/* <h1 className="home-name">Linas</h1> */}
 
             <p className="home-desc">
-              Esu internetinių tinklapių kūrėjas, pasiruošęs sukurti
+              esu internetinių tinklapių kūrėjas, pasiruošęs sukurti
               šiuolaikišką ir funkcionalų tinklapį, pritaikytą Jūsų asmeniniams
               ar verslo poreikiams. Visi mano darbai pagrįsti paprastumu ir
               praktiškumu, bei moderniu dizainu, kad vartotojo patirtis būtų
@@ -33,7 +33,7 @@ const Home = () => {
                   <h2 className="home-title-item">Hostingas</h2>
                 </div>
                 <div className="slide">
-                  <h2 className="home-title-item">Priežiūra</h2>
+                  <h2 className="home-title-item">Tinklapių Priežiūra</h2>
                 </div>
                 <div className="slide">
                   <h2 className="home-title-item">Internetiniai Tinklapiai</h2>

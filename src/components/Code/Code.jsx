@@ -1,36 +1,34 @@
-import React, { useContext, useRef, useEffect } from 'react';
-import { ThemeContext } from '../../context';
+import React, { useContext, useRef, useEffect } from "react";
+import { ThemeContext } from "../../context";
 
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 // something
 
-import Nav from '../Nav/Nav';
+import Nav from "../Nav/Nav";
 
-import './code.css';
-import HtmlImg from '../../img/badges/html.png';
-import JSImg from '../../img/badges/js.png';
-import ReactImg from '../../img/badges/react.png';
-import NativeImg from '../../img/badges/react-native.png';
-import ReduxImg from '../../img/badges/redux.png';
-import GitImg from '../../img/badges/git.png';
-import VueImg from '../../img/badges/vue.png';
-import ExpressImg from '../../img/badges/express.png';
-import ApolloImg from '../../img/badges/apollo.png';
-import FirebaseImg from '../../img/badges/firebase.png';
-import GraphImg from '../../img/badges/graphql.png';
-import MysqlImg from '../../img/badges/mysql.png';
-import MongoImg from '../../img/badges/mongodb.png';
-import PostgresImg from '../../img/badges/postgres.png';
-import NextImg from '../../img/badges/next.png';
-import NodeImg from '../../img/badges/node.png';
-import NginxImg from '../../img/badges/nginx.png';
+import "./code.css";
+import HtmlImg from "../../img/badges/html.png";
+import JSImg from "../../img/badges/js.png";
+import ReactImg from "../../img/badges/react.png";
+import NativeImg from "../../img/badges/react-native.png";
+import ReduxImg from "../../img/badges/redux.png";
+import GitImg from "../../img/badges/git.png";
+import VueImg from "../../img/badges/vue.png";
+import ExpressImg from "../../img/badges/express.png";
+import ApolloImg from "../../img/badges/apollo.png";
+import FirebaseImg from "../../img/badges/firebase.png";
+import GraphImg from "../../img/badges/graphql.png";
+import MysqlImg from "../../img/badges/mysql.png";
+import MongoImg from "../../img/badges/mongodb.png";
+import PostgresImg from "../../img/badges/postgres.png";
+import NextImg from "../../img/badges/next.png";
+import NodeImg from "../../img/badges/node.png";
+import NginxImg from "../../img/badges/nginx.png";
 
-import CodeImg from '../../img/code.jpg';
+import CodeImg from "../../img/code.jpg";
 
 const Code = () => {
-  // const [containerHeight, setContainerHeight] = useState(0);
-
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
@@ -38,36 +36,6 @@ const Code = () => {
   const { ref: ref2, inView: firstText } = useInView();
 
   const appRef = useRef(null);
-
-  // useEffect(() => {
-  //   if (appRef.current) {
-  //     setContainerHeight(appRef.current.scrollHeight);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   const setHeight = () => {
-  //     if (appRef.current) {
-  //       const screenHeight = window.innerHeight;
-  //       const bodyHeight = document.body.scrollHeight;
-  //       // appRef.current.style.height = `${Math.max(screenHeight, bodyHeight)}px`;
-  //       appRef.current.style.height = `${bodyHeight}px`;
-  //     }
-  //   };
-
-  //   setHeight(); // Set height on initial load
-
-  //   const handleResize = () => {
-  //     setHeight(); // Update height on window resize
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize); // Cleanup event listener
-  //   };
-  // }, []);
 
   useEffect(() => {
     const setBodyBackgroundSize = () => {
@@ -80,10 +48,10 @@ const Code = () => {
       setBodyBackgroundSize(); // Update background size on window resize
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize); // Cleanup event listener
+      window.removeEventListener("resize", handleResize); // Cleanup event listener
     };
   }, []);
 
@@ -103,8 +71,8 @@ const Code = () => {
               className="code-card bg"
               style={{
                 backgroundColor: !darkMode
-                  ? 'rgb(13, 96, 99)'
-                  : 'rgb(46, 148, 151)',
+                  ? "rgb(13, 96, 99)"
+                  : "rgb(46, 148, 151)",
               }}
             >
               <div className="code-card">
@@ -114,33 +82,34 @@ const Code = () => {
           </div>
           <div className="code-right">
             <h1
-              className={'code-title ' + (firstTitle ? 'animate-title' : '')}
+              className={"code-title " + (firstTitle ? "animate-title" : "")}
               ref={ref1}
             >
               Programavimo Kalba
             </h1>
-            <div className={firstText ? 'animate-first-text' : ''} ref={ref2}>
+            <div className={firstText ? "animate-first-text" : ""} ref={ref2}>
               <p className="code-sub">
                 Pagrindinė mano projektuose naudojama programavimo kalba -
                 JavaScript.
               </p>
               <p className="code-desc">
-                Javascript yra standartinė internetinių tinklapių programavimo kalba, skirta
-                jų sąveikai ir automatizavimui. Ji skirta tiek "kliento
-                pusės" (client-side, front-end) tiek "serverio-pusės"
+                Javascript yra standartinė internetinių tinklapių programavimo
+                kalba, skirta jų sąveikai ir automatizavimui. Ji skirta tiek
+                "kliento pusės" (client-side, front-end) tiek "serverio-pusės"
                 (server-side, back-end) programavimui. Kartu su JavaScript
                 naudoju įvairias papildomas bibliotekas, kad būtų suteikta pati
                 geriausia patirtis galutiniam tinklapio vartotojui. Kliento
                 pusėje dažnai naudoju React biblioteką, kuri yra galinga ir
                 lanksti, kad būtų lengviau kurti daugialypius tinklapius. Kartu
                 su React naudoju Redux, tai padeda valdyti duomenų srautą bei
-                tvarkyti sudėtingas aplikacijų būsenas ir palaiko jų
-                valdymą skaidriu ir efektyviu būdu. Serverio pusėje naudoju
-                Node.js kartu su Express.js, kad būtų galima kurti dinamiškus
-                tinklapius su serverio pusės logika ir užtikrinti saugų duomenų
-                srautą tarp vartotojo ir duomenų bazės. Jei reikia mobiliųjų
-                aplikacijų, naudoju React Native, kad tinklapio funkcionalumas
-                būtų lengviau pritaikomas mobiliajai platformai.
+                tvarkyti sudėtingas aplikacijų būsenas ir palaiko jų valdymą
+                skaidriu ir efektyviu būdu. Serverio pusėje naudoju Node.js
+                kartu su Express.js, kad būtų galima kurti dinamiškus tinklapius
+                su serverio pusės logika ir užtikrinti saugų duomenų srautą tarp
+                vartotojo ir duomenų bazės.
+                {/*Jei reikia mobiliųjų aplikacijų,
+                naudoju React Native, kad tinklapio funkcionalumas būtų lengviau
+                pritaikomas mobiliajai platformai.*/}
               </p>
             </div>
           </div>
